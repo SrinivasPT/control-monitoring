@@ -1,0 +1,38 @@
+control_id: GL_BALANCE_001
+generated_at: '2026-05-10T18:19:09.353178+00:00'
+generator: llm
+group_id: grp_01_gl_balance_checks
+steps:
+- dataset: gl_entries
+  id: step_01
+  output_alias: gl_entries_norm
+  type: NORMALIZE
+- check_id: CHK-GL-001
+  id: step_02
+  input: gl_entries_norm
+  metrics:
+  - filter: null
+    formula: SUM(debit_amount)
+    name: total_debits
+  - filter: null
+    formula: SUM(credit_amount)
+    name: total_credits
+  - filter: null
+    formula: ROUND(SUM(debit_amount) - SUM(credit_amount), 2)
+    name: imbalance
+  output_alias: period_balance_violations
+  type: AGGREGATE
+- check_field: account_code
+  check_id: CHK-GL-002
+  filter: null
+  id: step_03
+  input: gl_entries_norm
+  output_alias: missing_account_code
+  type: COMPLETENESS
+- check_id: CHK-GL-003
+  conditions:
+  - CAST(entry_date AS DATE) > CURRENT_DATE
+  id: step_04
+  input: gl_entries_norm
+  output_alias: future_dated_entries
+  type: FILTER

@@ -1,0 +1,30 @@
+control_id: TRADE_SETTLE_001
+generated_at: '2026-05-10T18:19:38.118743+00:00'
+generator: llm
+group_id: grp_02_settlement_sla_breach
+steps:
+- dataset: trades
+  id: step_01
+  output_alias: trades_02
+  type: NORMALIZE
+- dataset: settlements
+  id: step_02
+  output_alias: settlements_02
+  type: NORMALIZE
+- id: step_03
+  join_type: inner
+  left: trades_02
+  'on':
+    left_key: trade_id
+    right_key: trade_id
+  output_alias: trades_settlements_joined
+  right: settlements_02
+  type: JOIN
+- check_id: CHK-TS-002
+  conditions:
+  - status = 'SETTLED'
+  - CAST(settlement_date AS DATE) > CAST(settlement_due_date AS DATE)
+  id: step_04
+  input: trades_settlements_joined
+  output_alias: sla_breaches
+  type: FILTER

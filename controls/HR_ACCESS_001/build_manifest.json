@@ -1,0 +1,25 @@
+{
+  "control_id": "HR_ACCESS_001",
+  "built_at": "2026-05-10T18:19:20.002416+00:00",
+  "group_manifest_file": "controls\\HR_ACCESS_001\\decomposition.yaml",
+  "group_manifest_sha256": "0de582c23954f30a8aa7790b0f49d46e74d0da8f96735920c9cbe872bf8aa34e",
+  "groups": [
+    {
+      "group_id": "grp_01_terminated_employee_access",
+      "dsl_file": "controls\\HR_ACCESS_001\\groups\\grp_01_terminated_employee_access\\dsl.yaml",
+      "dsl_sha256": "c5a2834ce659929a0b6ad04197f9ea944c05358ca5dce47dd7a681ca3d289b08",
+      "compiled_sql_file": "controls\\HR_ACCESS_001\\groups\\grp_01_terminated_employee_access\\compiled.sql",
+      "compiled_sql_sha256": "bf2ef11f3d16b2b7913c4bdce5408799bd56984b1ab0c7cdac7d8b9f037ca846",
+      "datasets_required": [
+        "hr_roster",
+        "iam_accounts"
+      ],
+      "checks": [
+        "CHK-HR-001",
+        "CHK-HR-002",
+        "CHK-HR-003"
+      ]
+    }
+  ],
+  "generator_version": "1.0"
+}

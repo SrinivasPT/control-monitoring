@@ -1,0 +1,31 @@
+control_id: TRADE_SETTLE_001
+generated_at: '2026-05-10T18:19:38.118743+00:00'
+generator: llm
+group_id: grp_05_settlement_rate_aggregate
+steps:
+- dataset: settlements
+  id: step_01
+  output_alias: settlements_05
+  type: NORMALIZE
+- check_id: CHK-TS-005
+  id: step_02
+  input: settlements_05
+  metrics:
+  - filter: null
+    formula: COUNT(*)
+    name: total_settlements
+  - filter: null
+    formula: COUNT(*) FILTER (WHERE status = 'SETTLED')
+    name: settled_count
+  - filter: null
+    formula: COUNT(*) FILTER (WHERE status = 'FAILED')
+    name: failed_count
+  - filter: null
+    formula: COUNT(*) FILTER (WHERE status = 'PENDING')
+    name: pending_count
+  - filter: null
+    formula: ROUND(COUNT(*) FILTER (WHERE status = 'SETTLED')::DOUBLE / NULLIF(COUNT(*),
+      0), 4)
+    name: settlement_rate
+  output_alias: settlement_rate_metrics
+  type: AGGREGATE

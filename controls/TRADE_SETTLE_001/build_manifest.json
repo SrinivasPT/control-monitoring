@@ -1,0 +1,77 @@
+{
+  "control_id": "TRADE_SETTLE_001",
+  "built_at": "2026-05-10T18:19:38.152893+00:00",
+  "group_manifest_file": "controls\\TRADE_SETTLE_001\\decomposition.yaml",
+  "group_manifest_sha256": "48012f40d78af2eec803d4dfec1df2597c564f5b0103d0dc6afb2b3971585956",
+  "groups": [
+    {
+      "group_id": "grp_01_unmatched_trades",
+      "dsl_file": "controls\\TRADE_SETTLE_001\\groups\\grp_01_unmatched_trades\\dsl.yaml",
+      "dsl_sha256": "ac728db7a7fc79eb07cdb0208b1806f9558154d71abca9850f05ecf5f9e9a090",
+      "compiled_sql_file": "controls\\TRADE_SETTLE_001\\groups\\grp_01_unmatched_trades\\compiled.sql",
+      "compiled_sql_sha256": "730811e8286787fdaa65940db5e730a57298765bb59bd0a64534110e59add30a",
+      "datasets_required": [
+        "trades",
+        "settlements"
+      ],
+      "checks": [
+        "CHK-TS-001"
+      ]
+    },
+    {
+      "group_id": "grp_02_settlement_sla_breach",
+      "dsl_file": "controls\\TRADE_SETTLE_001\\groups\\grp_02_settlement_sla_breach\\dsl.yaml",
+      "dsl_sha256": "8bc871749e7e9f00afe44f5ab419362a79dd09c566354b71592265e1c7a2e073",
+      "compiled_sql_file": "controls\\TRADE_SETTLE_001\\groups\\grp_02_settlement_sla_breach\\compiled.sql",
+      "compiled_sql_sha256": "87a070fc3b650f25e03aa54183476c619adb2195c19b18bdd87e6a17b916e818",
+      "datasets_required": [
+        "trades",
+        "settlements"
+      ],
+      "checks": [
+        "CHK-TS-002"
+      ]
+    },
+    {
+      "group_id": "grp_03_credit_limit_violations",
+      "dsl_file": "controls\\TRADE_SETTLE_001\\groups\\grp_03_credit_limit_violations\\dsl.yaml",
+      "dsl_sha256": "dd771e7c843a0d09ec377456d9d681faff1f840c6f6bf18737e2a59bd7d97bb0",
+      "compiled_sql_file": "controls\\TRADE_SETTLE_001\\groups\\grp_03_credit_limit_violations\\compiled.sql",
+      "compiled_sql_sha256": "5292cfe1e5c7689e2e761f7d55831b2053bbe06891903d54364eede9565fa258",
+      "datasets_required": [
+        "trades",
+        "counterparties"
+      ],
+      "checks": [
+        "CHK-TS-003"
+      ]
+    },
+    {
+      "group_id": "grp_04_failed_settlements",
+      "dsl_file": "controls\\TRADE_SETTLE_001\\groups\\grp_04_failed_settlements\\dsl.yaml",
+      "dsl_sha256": "8aefe71629addb1794bb113233e83112121091c0502c2fe89176b396bf920ac4",
+      "compiled_sql_file": "controls\\TRADE_SETTLE_001\\groups\\grp_04_failed_settlements\\compiled.sql",
+      "compiled_sql_sha256": "9b072721e20d5af29d5b239585bd10ed6aef8c9f4dac504c8ac90bacafb0448c",
+      "datasets_required": [
+        "settlements"
+      ],
+      "checks": [
+        "CHK-TS-004"
+      ]
+    },
+    {
+      "group_id": "grp_05_settlement_rate_aggregate",
+      "dsl_file": "controls\\TRADE_SETTLE_001\\groups\\grp_05_settlement_rate_aggregate\\dsl.yaml",
+      "dsl_sha256": "ce5ffc387ffece51b987135144d8f19faf8e278805d7da12f152c77d4a070ef7",
+      "compiled_sql_file": "controls\\TRADE_SETTLE_001\\groups\\grp_05_settlement_rate_aggregate\\compiled.sql",
+      "compiled_sql_sha256": "8f5f19b9cd5474665edfc28256e4ea31aafbd085fbd61acce3e9ed6843d944dc",
+      "datasets_required": [
+        "settlements"
+      ],
+      "checks": [
+        "CHK-TS-005"
+      ]
+    }
+  ],
+  "generator_version": "1.0"
+}

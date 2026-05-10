@@ -1,0 +1,12 @@
+control_id: GL_BALANCE_001
+generated_at: '2026-05-10T18:19:09.353178+00:00'
+generator: llm
+groups:
+- checks: []
+  datasets:
+  - gl_entries
+  description: Normalize gl_entries, then run period balance aggregate, missing account
+    code completeness, and future-dated entry filter checks.
+  execution_order: 1
+  id: grp_01_gl_balance_checks
+  name: GL Balance and Completeness Checks

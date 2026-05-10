@@ -1,0 +1,13 @@
+control_id: HR_ACCESS_001
+generated_at: '2026-05-10T18:19:19.995242+00:00'
+generator: llm
+groups:
+- checks: []
+  datasets:
+  - hr_roster
+  - iam_accounts
+  description: Check for active IAM accounts belonging to terminated employees, and
+    compute SLA compliance for access revocation
+  execution_order: 1
+  id: grp_01_terminated_employee_access
+  name: Terminated Employee Access Violations

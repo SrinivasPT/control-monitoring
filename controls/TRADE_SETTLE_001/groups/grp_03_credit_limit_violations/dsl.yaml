@@ -1,0 +1,30 @@
+control_id: TRADE_SETTLE_001
+generated_at: '2026-05-10T18:19:38.118743+00:00'
+generator: llm
+group_id: grp_03_credit_limit_violations
+steps:
+- dataset: trades
+  id: step_01
+  output_alias: trades_03
+  type: NORMALIZE
+- dataset: counterparties
+  id: step_02
+  output_alias: counterparties_03
+  type: NORMALIZE
+- id: step_03
+  join_type: inner
+  left: trades_03
+  'on':
+    left_key: counterparty_id
+    right_key: counterparty_id
+  output_alias: trades_counterparties_joined
+  right: counterparties_03
+  type: JOIN
+- check_id: CHK-TS-003
+  conditions:
+  - notional_amount > credit_limit
+  - status != 'FAILED'
+  id: step_04
+  input: trades_counterparties_joined
+  output_alias: credit_limit_violations
+  type: FILTER

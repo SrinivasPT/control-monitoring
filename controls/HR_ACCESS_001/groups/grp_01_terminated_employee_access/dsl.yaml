@@ -1,0 +1,70 @@
+control_id: HR_ACCESS_001
+generated_at: '2026-05-10T18:19:19.995242+00:00'
+generator: llm
+group_id: grp_01_terminated_employee_access
+steps:
+- dataset: hr_roster
+  id: step_01
+  output_alias: hr_roster_01
+  type: NORMALIZE
+- dataset: iam_accounts
+  id: step_02
+  output_alias: iam_accounts_01
+  type: NORMALIZE
+- id: step_03
+  join_type: inner
+  left: hr_roster_01
+  'on':
+    left_key: employee_id
+    right_key: employee_id
+  output_alias: hr_iam_joined
+  right: iam_accounts_01
+  type: JOIN
+- check_id: CHK-HR-001
+  conditions:
+  - status = 'TERMINATED'
+  - account_status = 'ACTIVE'
+  id: step_04
+  input: hr_iam_joined
+  output_alias: active_access_terminated
+  type: FILTER
+- filter: null
+  from_field: termination_date
+  id: step_05
+  input: hr_iam_joined
+  output_alias: with_revocation_days
+  to_field: disabled_date
+  type: DATE_DIFF
+  unit: days
+- condition: termination_date_to_disabled_date_days <= 1
+  flag_field: within_sla
+  id: step_06
+  input: with_revocation_days
+  output_alias: with_sla_flag
+  type: THRESHOLD
+- check_id: CHK-HR-002
+  id: step_07
+  input: with_sla_flag
+  metrics:
+  - filter: null
+    formula: COUNT(*) FILTER (WHERE within_sla)
+    name: accounts_disabled_within_sla
+  - filter: null
+    formula: COUNT(*)
+    name: total_disabled_accounts
+  - filter: null
+    formula: ROUND(COUNT(*) FILTER (WHERE within_sla)::DOUBLE / NULLIF(COUNT(*), 0),
+      4)
+    name: sla_compliance_rate
+  output_alias: sla_compliance
+  type: AGGREGATE
+- check_field: termination_date
+  check_id: CHK-HR-003
+  filter:
+    field: status
+    op: eq
+    value: TERMINATED
+  id: step_08
+  input: hr_roster_01
+  output_alias: missing_termination_date
+  type: COMPLETENESS

@@ -1,0 +1,16 @@
+control_id: TRADE_SETTLE_001
+generated_at: '2026-05-10T18:19:38.118743+00:00'
+generator: llm
+group_id: grp_04_failed_settlements
+steps:
+- dataset: settlements
+  id: step_01
+  output_alias: settlements_04
+  type: NORMALIZE
+- check_id: CHK-TS-004
+  conditions:
+  - status = 'FAILED'
+  id: step_02
+  input: settlements_04
+  output_alias: failed_settlements
+  type: FILTER

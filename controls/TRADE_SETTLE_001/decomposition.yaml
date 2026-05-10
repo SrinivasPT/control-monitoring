@@ -1,0 +1,43 @@
+control_id: TRADE_SETTLE_001
+generated_at: '2026-05-10T18:19:38.118743+00:00'
+generator: llm
+groups:
+- checks: []
+  datasets:
+  - trades
+  - settlements
+  description: Find trades with no corresponding settlement record (CHK-TS-001)
+  execution_order: 1
+  id: grp_01_unmatched_trades
+  name: Unmatched Trades Reconciliation
+- checks: []
+  datasets:
+  - trades
+  - settlements
+  description: Find trades where settlement occurred after the contractual due date
+    (CHK-TS-002)
+  execution_order: 2
+  id: grp_02_settlement_sla_breach
+  name: Settlement SLA Breach Detection
+- checks: []
+  datasets:
+  - trades
+  - counterparties
+  description: Find trades where notional exceeds counterparty credit limit (CHK-TS-003)
+  execution_order: 3
+  id: grp_03_credit_limit_violations
+  name: Credit Limit Violations
+- checks: []
+  datasets:
+  - settlements
+  description: Identify all settlement records with FAILED status (CHK-TS-004)
+  execution_order: 4
+  id: grp_04_failed_settlements
+  name: Failed Settlements
+- checks: []
+  datasets:
+  - settlements
+  description: Compute aggregate settlement metrics including settlement rate (CHK-TS-005)
+  execution_order: 5
+  id: grp_05_settlement_rate_aggregate
+  name: Settlement Rate by Status

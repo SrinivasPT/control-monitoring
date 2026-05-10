@@ -1,0 +1,21 @@
+control_id: TRADE_SETTLE_001
+generated_at: '2026-05-10T18:19:38.118743+00:00'
+generator: llm
+group_id: grp_01_unmatched_trades
+steps:
+- dataset: trades
+  id: step_01
+  output_alias: trades_01
+  type: NORMALIZE
+- dataset: settlements
+  id: step_02
+  output_alias: settlements_01
+  type: NORMALIZE
+- check_id: CHK-TS-001
+  id: step_03
+  left: trades_01
+  left_key: trade_id
+  output_alias: unmatched_trades
+  right: settlements_01
+  right_key: trade_id
+  type: RECONCILIATION
