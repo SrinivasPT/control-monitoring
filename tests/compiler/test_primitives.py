@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import pytest
-
 from src.models.dsl import (
     AggregateStep,
     CompletenessStep,

@@ -3,17 +3,15 @@
 from __future__ import annotations
 
 import time
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
 import duckdb
 
+from src.compiler.cte_builder import TERMINAL_SEPARATOR
 from src.models.control import ControlFile
 from src.models.decomposition import GroupDefinition
-from src.models.manifest import BuildManifest
 from src.models.result import (
-    AuditRecord,
     CheckEvaluated,
     DatasetUsed,
     GroupAuditEntry,
@@ -21,7 +19,6 @@ from src.models.result import (
     Violation,
 )
 from src.runtime.result_parser import parse_aggregate, parse_row_level
-from src.compiler.cte_builder import TERMINAL_SEPARATOR
 from src.utils.filesystem import ensure_dir, write_json
 from src.utils.hashing import sha256_file
 from src.utils.logging import get_logger

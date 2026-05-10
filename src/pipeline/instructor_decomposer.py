@@ -11,7 +11,6 @@ Uses DeepSeek via instructor (same pattern as scrap/llm.py).
 from __future__ import annotations
 
 import json
-import logging
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Literal, Optional
@@ -19,14 +18,14 @@ from typing import Literal, Optional
 import yaml
 from pydantic import BaseModel, Field
 
-from src.decomposer.llm_client import LLMClient, LLMError
+from src.decomposer.llm_client import LLMClient
 from src.models.decomposition import GroupDefinition, GroupManifest
 from src.models.dsl import (
     AggregateMetric,
     AggregateStep,
     CompletenessStep,
-    DSLPlan,
     DateDiffStep,
+    DSLPlan,
     FilterConditionDef,
     FilterStep,
     JoinKey,

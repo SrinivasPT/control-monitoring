@@ -23,7 +23,7 @@ from src.models.decomposition import GroupManifest
 from src.models.manifest import BuildManifest
 from src.runtime.executor import execute_group
 from src.runtime.result_merger import merge_results
-from src.utils.filesystem import ensure_dir, file_exists, load_json, load_yaml
+from src.utils.filesystem import load_json, load_yaml
 from src.utils.logging import get_logger, setup_logging
 
 

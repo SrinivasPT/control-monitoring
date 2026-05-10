@@ -31,16 +31,11 @@ def _make_client():
         import instructor
         from openai import OpenAI
     except ImportError as exc:
-        raise LLMError(
-            "Required packages missing. Run: pip install instructor openai"
-        ) from exc
+        raise LLMError("Required packages missing. Run: pip install instructor openai") from exc
 
     api_key = os.environ.get("DEEPSEEK_API_KEY")
     if not api_key:
-        raise LLMError(
-            "DEEPSEEK_API_KEY environment variable is not set. "
-            "Export it before running the pipeline."
-        )
+        raise LLMError("DEEPSEEK_API_KEY environment variable is not set. Export it before running the pipeline.")
 
     return instructor.from_openai(
         OpenAI(
@@ -129,74 +124,10 @@ class LLMClient:
                     exc,
                 )
 
-        raise LLMError(
-            f"LLM call failed after {retries} attempts. "
-            f"Last error: {last_exc}"
-        ) from last_exc
+        raise LLMError(f"LLM call failed after {retries} attempts. Last error: {last_exc}") from last_exc
 
     # ------------------------------------------------------------------
-    # Legacy JSON-schema structured output (kept for backward compat)
-    # ------------------------------------------------------------------
-
-    def call_structured(
-        self,
-        system_prompt: str,
-        user_prompt: str,
-        json_schema: dict[str, Any],
-    ) -> dict[str, Any]:
-        """Call DeepSeek and return a dict validated against *json_schema*.
-
-        Uses instructor's JSON mode as a fallback when a Pydantic model
-        is not available.
-        """
-        try:
-            import instructor
-            from openai import OpenAI
-
-            api_key = os.environ.get("DEEPSEEK_API_KEY")
-            if not api_key:
-                raise LLMError("DEEPSEEK_API_KEY not set")
-
-            raw_client = OpenAI(
-                api_key=api_key,
-                base_url="https://api.deepseek.com",
-            )
-
-            # Use JSON mode (instructor-free path for schema dicts)
-            response = raw_client.chat.completions.create(
-                model=self.model,
-                temperature=0,
-                response_format={"type": "json_object"},
-                messages=[
-                    {
-                        "role": "system",
-                        "content": (
-                            system_prompt
-                            + f"\n\nRespond ONLY with valid JSON matching this schema:\n"
-                            + json.dumps(json_schema, indent=2)
-                        ),
-                    },
-                    {"role": "user", "content": user_prompt},
-                ],
-            )
-
-            content = response.choices[0].message.content or ""
-            # Strip markdown fences if present
-            content = content.strip()
-            if content.startswith("```"):
-                lines = content.split("\n")
-                content = "\n".join(lines[1:-1] if lines[-1] == "```" else lines[1:])
-
-            return json.loads(content)
-
-        except LLMError:
-            raise
-        except Exception as exc:
-            raise LLMError(f"call_structured failed: {exc}") from exc
-
-
-    # ------------------------------------------------------------------
-    # Public API
+    # Structured JSON output (dispatches to provider implementations)
     # ------------------------------------------------------------------
 
     def call_structured(
@@ -238,9 +169,7 @@ class LLMClient:
         try:
             from openai import OpenAI
         except ImportError as exc:
-            raise LLMError(
-                "openai package is not installed. Run: pip install openai"
-            ) from exc
+            raise LLMError("openai package is not installed. Run: pip install openai") from exc
 
         client = OpenAI(timeout=self.timeout_seconds, max_retries=self.max_retries)
 
@@ -268,9 +197,7 @@ class LLMClient:
         try:
             return json.loads(content)
         except json.JSONDecodeError as exc:
-            raise LLMError(
-                f"LLM response is not valid JSON: {exc}\nResponse: {content[:500]}"
-            ) from exc
+            raise LLMError(f"LLM response is not valid JSON: {exc}\nResponse: {content[:500]}") from exc
 
     def _call_anthropic(
         self,
@@ -281,9 +208,7 @@ class LLMClient:
         try:
             import anthropic
         except ImportError as exc:
-            raise LLMError(
-                "anthropic package is not installed. Run: pip install anthropic"
-            ) from exc
+            raise LLMError("anthropic package is not installed. Run: pip install anthropic") from exc
 
         client = anthropic.Anthropic()
 

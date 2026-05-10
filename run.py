@@ -18,7 +18,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import logging
 import sys
 import time
 import traceback
@@ -45,7 +44,7 @@ from src.models.schema import DatasetSchema
 from src.pipeline.instructor_decomposer import decompose_control
 from src.runtime.executor import execute_group
 from src.runtime.result_merger import merge_results
-from src.utils.filesystem import ensure_dir, file_exists, load_json, load_yaml, write_json
+from src.utils.filesystem import ensure_dir, load_json, load_yaml, write_json
 from src.utils.hashing import sha256_file
 from src.utils.logging import get_logger, setup_logging
 
@@ -64,23 +63,28 @@ def parse_args() -> argparse.Namespace:
         epilog=__doc__,
     )
     p.add_argument(
-        "--control", metavar="ID",
+        "--control",
+        metavar="ID",
         help="Run a specific control from input/ (default: all).",
     )
     p.add_argument(
-        "--force", action="store_true",
+        "--force",
+        action="store_true",
         help="Force LLM regeneration and SQL recompilation.",
     )
     p.add_argument(
-        "--skip-llm", action="store_true",
+        "--skip-llm",
+        action="store_true",
         help="Skip LLM calls; use existing decomposition.yaml / dsl.yaml artifacts.",
     )
     p.add_argument(
-        "--dry-run", action="store_true",
+        "--dry-run",
+        action="store_true",
         help="Ingest and validate input without executing SQL.",
     )
     p.add_argument(
-        "--log-level", default="INFO",
+        "--log-level",
+        default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
         help="Logging verbosity (default: INFO).",
     )
@@ -111,8 +115,7 @@ def ingest_control(
     csv_files = sorted(input_dir.glob("*.csv"))
     if not csv_files:
         raise FileNotFoundError(
-            f"No CSV files found in {input_dir}. "
-            "Add evidence CSV files alongside control-instruction.md."
+            f"No CSV files found in {input_dir}. Add evidence CSV files alongside control-instruction.md."
         )
 
     schemas: list[DatasetSchema] = []
@@ -126,7 +129,8 @@ def ingest_control(
         if parquet_out.exists() and schema_out.exists() and not force:
             log.info(
                 "[%s/%s] Parquet + schema exist — loading (use --force to re-ingest).",
-                control_id, dataset_id,
+                control_id,
+                dataset_id,
             )
             schema = read_schema(schema_out)
             df = pl.read_parquet(parquet_out)
@@ -137,29 +141,31 @@ def ingest_control(
             df_raw = read_evidence(csv_path)
             log.info(
                 "[%s/%s] Read %d rows × %d cols in %.2fs",
-                control_id, dataset_id,
-                len(df_raw), len(df_raw.columns),
+                control_id,
+                dataset_id,
+                len(df_raw),
+                len(df_raw.columns),
                 time.monotonic() - t0,
             )
 
             existing_schema = read_schema(schema_out) if schema_out.exists() else None
-            df, schema = normalize_dataframe(
-                df_raw, dataset_id, str(csv_path), existing_schema
-            )
+            df, schema = normalize_dataframe(df_raw, dataset_id, str(csv_path), existing_schema)
             df.write_parquet(parquet_out)
             write_schema(schema_out, schema)
 
             log.info(
                 "[%s/%s] Normalised → %s (%d rows, %d cols)",
-                control_id, dataset_id,
-                parquet_out.name, len(df), len(df.columns),
+                control_id,
+                dataset_id,
+                parquet_out.name,
+                len(df),
+                len(df.columns),
             )
 
         schemas.append(schema)
         # Sample rows for the LLM prompt (convert to JSON-serialisable dicts)
         sample_rows[dataset_id] = [
-            {k: (str(v) if v is not None else None) for k, v in row.items()}
-            for row in df.head(10).to_dicts()
+            {k: (str(v) if v is not None else None) for k, v in row.items()} for row in df.head(10).to_dicts()
         ]
 
     return schemas, sample_rows
@@ -188,9 +194,7 @@ def build_control(
     if skip_llm:
         decomp_path = controls_dir / control_id / "decomposition.yaml"
         if not decomp_path.exists():
-            raise FileNotFoundError(
-                f"--skip-llm set but no decomposition.yaml found: {decomp_path}"
-            )
+            raise FileNotFoundError(f"--skip-llm set but no decomposition.yaml found: {decomp_path}")
         log.info("[%s] --skip-llm: loading existing decomposition artifacts.", control_id)
         manifest = GroupManifest.model_validate(load_yaml(decomp_path))
         dsl_plans: dict[str, DSLPlan] = {}
@@ -233,23 +237,21 @@ def build_control(
 
         # Validate
         allowed_ds = set(group.datasets)
-        all_check_ids = {
-            s.check_id
-            for s in dsl_plan.steps
-            if hasattr(s, "check_id") and s.check_id
-        }
+        all_check_ids = {s.check_id for s in dsl_plan.steps if hasattr(s, "check_id") and s.check_id}
         errors = validate_dsl(dsl_plan, allowed_datasets=allowed_ds, allowed_check_ids=all_check_ids)
         if errors:
             log.warning(
                 "[%s/%s] DSL validation warnings (%d):\n  %s",
-                control_id, group.id, len(errors),
+                control_id,
+                group.id,
+                len(errors),
                 "\n  ".join(str(e) for e in errors),
             )
 
         # Compile
         log.info("[%s/%s] Compiling SQL …", control_id, group.id)
         t0 = time.monotonic()
-        sql = compile_group(dsl_plan, schema_map, controls_dir, force=force)
+        compile_group(dsl_plan, schema_map, controls_dir, force=force)
         elapsed = int((time.monotonic() - t0) * 1000)
         log.info("[%s/%s] SQL compiled in %dms.", control_id, group.id, elapsed)
 
@@ -257,11 +259,7 @@ def build_control(
         dsl_path = controls_dir / control_id / "groups" / group.id / "dsl.yaml"
         sql_path = controls_dir / control_id / "groups" / group.id / "compiled.sql"
 
-        step_check_ids = [
-            s.check_id
-            for s in dsl_plan.steps
-            if hasattr(s, "check_id") and s.check_id
-        ]
+        step_check_ids = [s.check_id for s in dsl_plan.steps if hasattr(s, "check_id") and s.check_id]
 
         group_entries.append(
             GroupManifestEntry(
@@ -343,12 +341,18 @@ def execute_control(
             errors += 1
             log.error(
                 "[%s/%s] Execution ERROR in %dms: %s",
-                control_id, group.id, elapsed, audit_entry.error_message,
+                control_id,
+                group.id,
+                elapsed,
+                audit_entry.error_message,
             )
         else:
             log.info(
                 "[%s/%s] Executed in %dms — %d violations.",
-                control_id, group.id, elapsed, audit_entry.violation_count,
+                control_id,
+                group.id,
+                elapsed,
+                audit_entry.violation_count,
             )
 
     audit = merge_results(control_id, group_audit_entries, results_root)
@@ -365,6 +369,7 @@ def execute_control(
 def _dummy_control(control_id: str):
     """Create a minimal control object for execute_group (severity lookup)."""
     from types import SimpleNamespace
+
     return SimpleNamespace(
         control=SimpleNamespace(id=control_id),
         checks=[],  # severity defaults to 'medium'
@@ -381,7 +386,6 @@ def validate_and_report(control_id: str, exec_summary: dict[str, Any], settings)
     results_dir = settings.control_results_path(control_id)
     violations_path = results_dir / "violations.json"
     metrics_path = results_dir / "metrics.json"
-    audit_path = results_dir / "audit.json"
 
     violations = load_json(violations_path) if violations_path.exists() else []
     metrics = load_json(metrics_path) if metrics_path.exists() else []
@@ -438,19 +442,17 @@ def validate_and_report(control_id: str, exec_summary: dict[str, Any], settings)
 
     # Print top-5 violations for inspection
     if violations:
-        print(f"\n  Sample violations (first 5):")
+        print("\n  Sample violations (first 5):")
         for v in violations[:5]:
             cid = v.get("check_id", "?")
             sev = v.get("severity", "?")
             reason = v.get("reason", "")[:80]
-            evidence_str = json.dumps(
-                {k: val for k, val in (v.get("evidence") or {}).items()}, default=str
-            )[:120]
+            evidence_str = json.dumps({k: val for k, val in (v.get("evidence") or {}).items()}, default=str)[:120]
             print(f"    [{sev:8s}] {cid}: {reason}")
             print(f"             evidence: {evidence_str}")
 
     if metrics:
-        print(f"\n  Metrics:")
+        print("\n  Metrics:")
         for m in metrics:
             cid = m.get("check_id", "?")
             val = m.get("value")
@@ -487,9 +489,7 @@ def run_control(
     instruction_path = input_dir / "control-instruction.md"
 
     if not instruction_path.exists():
-        raise FileNotFoundError(
-            f"Missing control instruction: {instruction_path}"
-        )
+        raise FileNotFoundError(f"Missing control instruction: {instruction_path}")
 
     instruction = instruction_path.read_text(encoding="utf-8")
     log.info("[%s] Instruction loaded (%d chars).", control_id, len(instruction))
@@ -538,6 +538,7 @@ def main() -> int:
 
     # Invalidate cached settings so the new paths take effect
     import src.config as _cfg
+
     _cfg._cached_settings = None
     settings = load_settings()
 
@@ -555,8 +556,7 @@ def main() -> int:
         control_ids = [args.control]
     else:
         control_ids = sorted(
-            d.name for d in input_root.iterdir()
-            if d.is_dir() and (d / "control-instruction.md").exists()
+            d.name for d in input_root.iterdir() if d.is_dir() and (d / "control-instruction.md").exists()
         )
 
     if not control_ids:

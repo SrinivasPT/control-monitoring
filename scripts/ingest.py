@@ -18,7 +18,6 @@ from pathlib import Path
 _ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT))
 
-import polars as pl
 
 from src.config import load_settings
 from src.ingestion.normalizer import normalize_dataframe
@@ -26,7 +25,7 @@ from src.ingestion.reader import read_evidence
 from src.ingestion.registry import DatasetRegistry
 from src.ingestion.schema import read_schema, write_schema
 from src.models.control import ControlFile
-from src.utils.filesystem import ensure_dir, file_exists, load_yaml
+from src.utils.filesystem import ensure_dir, load_yaml
 from src.utils.logging import get_logger, setup_logging
 
 

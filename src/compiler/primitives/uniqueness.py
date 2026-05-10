@@ -10,7 +10,6 @@ def build_cte(step: UniquenessStep, schemas: dict[str, DatasetSchema]) -> str:
     """Return a SQL CTE block for the UNIQUENESS step."""
     check_id_val = f"'{step.check_id}'" if step.check_id else "NULL"
     keys_csv = ", ".join(step.key_columns)
-    keys_display = " + '.' + ".join(f"CAST({k} AS VARCHAR)" for k in step.key_columns)
 
     body = (
         f"    SELECT\n"
@@ -26,9 +25,4 @@ def build_cte(step: UniquenessStep, schemas: dict[str, DatasetSchema]) -> str:
         f"    WHERE _dup_count > 1"
     )
 
-    return (
-        f"{step.output_alias} AS (\n"
-        f"    -- {step.id}: UNIQUENESS on [{keys_csv}]\n"
-        f"{body}\n"
-        f")"
-    )
+    return f"{step.output_alias} AS (\n    -- {step.id}: UNIQUENESS on [{keys_csv}]\n{body}\n)"

@@ -1,0 +1,20 @@
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+# Scripts manipulate sys.path before importing local packages — E402 is intentional.
+"run.py" = ["E402"]
+"scripts/*.py" = ["E402"]
+# __init__.py files may re-export symbols without using them directly.
+"**/__init__.py" = ["F401"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

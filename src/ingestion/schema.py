@@ -3,11 +3,10 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
 
 import yaml
 
-from src.models.schema import ColumnSchema, DatasetSchema
+from src.models.schema import DatasetSchema
 from src.utils.filesystem import ensure_dir
 
 

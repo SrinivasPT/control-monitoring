@@ -5,7 +5,6 @@ from __future__ import annotations
 from src.models.dsl import DateDiffStep
 from src.models.schema import DatasetSchema
 
-
 _UNIT_MAP = {
     "days": "day",
     "day": "day",

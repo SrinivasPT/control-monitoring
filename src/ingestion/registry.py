@@ -9,8 +9,6 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Optional
 
-import yaml
-
 from src.models.control import ControlFile
 from src.utils.filesystem import load_yaml
 

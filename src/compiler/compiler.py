@@ -7,10 +7,8 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
 
-from src.compiler import primitives as _prim_pkg
-from src.compiler.cte_builder import CTEBuilder, _RESULT_TYPE_MAP, _TERMINAL_TYPES
+from src.compiler.cte_builder import _RESULT_TYPE_MAP, CTEBuilder
 from src.compiler.primitives import (
     aggregate,
     completeness,
@@ -23,20 +21,10 @@ from src.compiler.primitives import (
     uniqueness,
 )
 from src.models.dsl import (
-    ALLOWED_PRIMITIVE_TYPES,
-    AggregateStep,
-    CompletenessStep,
     DSLPlan,
-    DateDiffStep,
-    FilterStep,
-    JoinStep,
-    NormalizeStep,
-    ReconciliationStep,
-    ThresholdStep,
-    UniquenessStep,
 )
 from src.models.schema import DatasetSchema
-from src.utils.filesystem import ensure_dir, file_exists
+from src.utils.filesystem import ensure_dir
 from src.utils.logging import get_logger
 
 log = get_logger(__name__)

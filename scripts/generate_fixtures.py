@@ -21,7 +21,6 @@ sys.path.insert(0, str(_ROOT))
 
 
 def create_iam_xlsx():
-    import openpyxl
     from openpyxl import Workbook
 
     wb = Workbook()

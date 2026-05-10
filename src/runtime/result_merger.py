@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from src.models.result import AuditRecord, GroupAuditEntry, Metric, Violation
+from src.models.result import AuditRecord, GroupAuditEntry
 from src.utils.filesystem import load_json, write_json
 from src.utils.logging import get_logger
 

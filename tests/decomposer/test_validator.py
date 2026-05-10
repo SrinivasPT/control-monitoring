@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import pytest
-
 from src.decomposer.validator import validate_dsl
 from src.models.dsl import DSLPlan, FilterStep, NormalizeStep
 

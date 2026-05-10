@@ -11,7 +11,6 @@ from typing import Annotated, Literal, Optional, Union
 
 from pydantic import BaseModel, Field
 
-
 # ---------------------------------------------------------------------------
 # Shared sub-models
 # ---------------------------------------------------------------------------

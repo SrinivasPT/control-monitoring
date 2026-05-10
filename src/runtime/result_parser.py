@@ -52,7 +52,6 @@ def parse_aggregate(
     threshold_val = None
     passed = bool(row.get("passed", True))
 
-    from src.models.control import CheckDefinition
 
     for chk in control_checks or []:
         if chk.id == check_id and chk.threshold:

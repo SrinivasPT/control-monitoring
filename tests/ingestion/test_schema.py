@@ -2,10 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
-import pytest
-
 from src.ingestion.schema import read_schema, write_schema, write_schema_force
 from src.models.schema import ColumnSchema, DatasetSchema
 

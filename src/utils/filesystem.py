@@ -4,7 +4,6 @@ Core rule: never overwrite an existing file unless explicitly requested.
 """
 
 import json
-import os
 from pathlib import Path
 from typing import Any
 

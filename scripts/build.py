@@ -11,7 +11,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 import time
 from datetime import datetime, timezone
@@ -29,30 +28,22 @@ from src.decomposer.validator import validate_dsl
 from src.ingestion.schema import read_schema
 from src.models.control import ControlFile
 from src.models.manifest import BuildManifest, GroupManifestEntry
-from src.utils.filesystem import ensure_dir, file_exists, load_yaml, write_json
+from src.utils.filesystem import load_yaml, write_json
 from src.utils.hashing import sha256_file
 from src.utils.logging import get_logger, setup_logging
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(
-        description="Run the Build Phase — decompose and compile control definitions."
-    )
-    p.add_argument(
-        "--control", metavar="ID", help="Build a specific control (default: all)."
-    )
-    p.add_argument(
-        "--group", metavar="ID", help="Scope to a specific group within the control."
-    )
+    p = argparse.ArgumentParser(description="Run the Build Phase — decompose and compile control definitions.")
+    p.add_argument("--control", metavar="ID", help="Build a specific control (default: all).")
+    p.add_argument("--group", metavar="ID", help="Scope to a specific group within the control.")
     p.add_argument(
         "--force",
         metavar="TARGET",
         choices=["groups", "dsl", "compile", "all"],
         help="Force regeneration: groups | dsl | compile | all.",
     )
-    p.add_argument(
-        "--skip-llm", action="store_true", help="Skip LLM calls; compile only."
-    )
+    p.add_argument("--skip-llm", action="store_true", help="Skip LLM calls; compile only.")
     p.add_argument(
         "--dry-run",
         action="store_true",
@@ -125,17 +116,13 @@ def build_control(
         manifest = GroupManifest.model_validate(load_yaml(manifest_path))
         log.info(f"[{cid}] --skip-llm: loaded existing decomposition.yaml.")
     else:
-        manifest = decompose_groups(
-            control, controls_dir, llm_client, force=force_groups
-        )
+        manifest = decompose_groups(control, controls_dir, llm_client, force=force_groups)
 
     groups = manifest.ordered_groups()
     if target_group:
         groups = [g for g in groups if g.id == target_group]
         if not groups:
-            log.error(
-                f"[{cid}] Group '{target_group}' not found in decomposition.yaml."
-            )
+            log.error(f"[{cid}] Group '{target_group}' not found in decomposition.yaml.")
             return {
                 "control_id": cid,
                 "status": "error",
@@ -163,9 +150,7 @@ def build_control(
 
                 dsl_plan = DSLPlan.model_validate(load_yaml(dsl_path))
             else:
-                dsl_plan = decompose_dsl(
-                    control, group, controls_dir, llm_client, force=force_dsl
-                )
+                dsl_plan = decompose_dsl(control, group, controls_dir, llm_client, force=force_dsl)
 
             # Validate DSL
             validation_errors = validate_dsl(
@@ -178,9 +163,7 @@ def build_control(
                     log.warning(f"[{cid}/{gid}] DSL validation: {err}")
 
             # SQL compilation
-            compiled_sql = compile_group(
-                dsl_plan, schemas, controls_dir, force=force_compile
-            )
+            compile_group(dsl_plan, schemas, controls_dir, force=force_compile)
 
             # Checksums
             dsl_path = controls_dir / cid / "groups" / gid / "dsl.yaml"
@@ -215,9 +198,7 @@ def build_control(
     write_json(manifest_json_path, manifest_file.model_dump())
 
     elapsed = int((time.monotonic() - t0) * 1000)
-    log.info(
-        f"[{cid}] Build done in {elapsed}ms — {len(group_entries)} groups, {errors} errors."
-    )
+    log.info(f"[{cid}] Build done in {elapsed}ms — {len(group_entries)} groups, {errors} errors.")
     return {
         "control_id": cid,
         "status": "error" if errors else "ok",

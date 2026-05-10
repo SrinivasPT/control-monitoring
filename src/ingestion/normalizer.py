@@ -10,7 +10,6 @@ import polars as pl
 
 from src.models.schema import ColumnSchema, DatasetSchema
 
-
 # ---------------------------------------------------------------------------
 # Column-name sanitisation
 # ---------------------------------------------------------------------------

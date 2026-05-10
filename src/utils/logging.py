@@ -1,7 +1,7 @@
 """Structured logging setup for the control monitoring engine."""
 
-import logging
 import json
+import logging
 import sys
 from datetime import datetime, timezone
 from typing import Any

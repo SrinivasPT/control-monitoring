@@ -2,10 +2,7 @@
 
 from __future__ import annotations
 
-import pytest
-
 from src.runtime.result_parser import parse_aggregate, parse_row_level
-
 
 SEVERITY_MAP = {"chk_01": "high", "chk_02": "medium"}
 

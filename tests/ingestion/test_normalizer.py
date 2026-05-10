@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import polars as pl
-import pytest
 
 from src.ingestion.normalizer import normalize_dataframe, sanitize_column_name
 
@@ -62,9 +61,7 @@ class TestNormalizeDataframe:
     def test_date_column_inferred(self):
         df = self._make_df({"termination_date": ["2026-03-01", "2026-04-15", None]})
         norm, schema = normalize_dataframe(df, "test_ds", "test.csv")
-        col_schema = next(
-            (c for c in schema.columns if c.normalized_name == "termination_date"), None
-        )
+        col_schema = next((c for c in schema.columns if c.normalized_name == "termination_date"), None)
         assert col_schema is not None
         assert col_schema.type in ("date", "datetime", "string")
 
@@ -76,8 +73,6 @@ class TestNormalizeDataframe:
         assert schema_names == df_names
 
     def test_duplicate_column_names_deduplicated(self):
-        # Build a DF with duplicate column names via rename
-        df = pl.DataFrame({"a": [1], "b": [2]}).rename({"b": "a"})
         # Polars doesn't allow true duplicate columns, so simulate at model level
         df2 = self._make_df({"col_a": [1], "col_b": [2], "col_c": [3]})
         norm, schema = normalize_dataframe(df2, "test_ds", "test.csv")

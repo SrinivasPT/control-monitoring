@@ -5,17 +5,15 @@ This is the first LLM-assisted step in the Build phase.
 
 from __future__ import annotations
 
-import json
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
 
 import yaml
 
-from src.decomposer.llm_client import LLMClient, LLMError
+from src.decomposer.llm_client import LLMClient
 from src.models.control import ControlFile
 from src.models.decomposition import GroupDefinition, GroupManifest
-from src.utils.filesystem import ensure_dir, file_exists, load_yaml
+from src.utils.filesystem import ensure_dir, load_yaml
 from src.utils.logging import get_logger
 
 log = get_logger(__name__)
