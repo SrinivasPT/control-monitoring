@@ -1,0 +1,29 @@
+dataset_id: counterparties
+source_file: C:\Users\omega\projects\control-monitoring\input\TRADE_SETTLE_001\counterparties.csv
+generated_at: '2026-05-10T18:11:24.095534+00:00'
+columns:
+- source_name: counterparty_id
+  normalized_name: counterparty_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: name
+  normalized_name: name
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: credit_limit
+  normalized_name: credit_limit
+  type: float
+  nullable: true
+  date_formats_tried: null
+- source_name: risk_rating
+  normalized_name: risk_rating
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: status
+  normalized_name: status
+  type: string
+  nullable: true
+  date_formats_tried: null

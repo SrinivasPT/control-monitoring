@@ -1,0 +1,29 @@
+dataset_id: settlements
+source_file: C:\Users\omega\projects\control-monitoring\input\TRADE_SETTLE_001\settlements.csv
+generated_at: '2026-05-10T18:11:24.109538+00:00'
+columns:
+- source_name: settlement_id
+  normalized_name: settlement_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: trade_id
+  normalized_name: trade_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: settlement_date
+  normalized_name: settlement_date
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: amount_settled
+  normalized_name: amount_settled
+  type: float
+  nullable: true
+  date_formats_tried: null
+- source_name: status
+  normalized_name: status
+  type: string
+  nullable: true
+  date_formats_tried: null

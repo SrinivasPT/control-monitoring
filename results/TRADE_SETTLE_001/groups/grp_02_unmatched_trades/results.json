@@ -1,0 +1,141 @@
+{
+  "violations": [
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-004",
+        "counterparty_id": "CP-001",
+        "trade_date": "2026-04-29",
+        "settlement_due_date": "2026-05-01",
+        "notional_amount": 9800000.0,
+        "currency": "USD",
+        "status": "OPEN"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-007",
+        "counterparty_id": "CP-005",
+        "trade_date": "2026-05-01",
+        "settlement_due_date": "2026-05-05",
+        "notional_amount": 2100000.0,
+        "currency": "USD",
+        "status": "PENDING"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-009",
+        "counterparty_id": "CP-001",
+        "trade_date": "2026-05-02",
+        "settlement_due_date": "2026-05-06",
+        "notional_amount": 14500000.0,
+        "currency": "USD",
+        "status": "OPEN"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-011",
+        "counterparty_id": "CP-004",
+        "trade_date": "2026-05-05",
+        "settlement_due_date": "2026-05-07",
+        "notional_amount": 3300000.0,
+        "currency": "GBP",
+        "status": "PENDING"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-014",
+        "counterparty_id": "CP-005",
+        "trade_date": "2026-05-06",
+        "settlement_due_date": "2026-05-08",
+        "notional_amount": 4100000.0,
+        "currency": "USD",
+        "status": "OPEN"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-017",
+        "counterparty_id": "CP-001",
+        "trade_date": "2026-05-08",
+        "settlement_due_date": "2026-05-12",
+        "notional_amount": 6800000.0,
+        "currency": "USD",
+        "status": "OPEN"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-019",
+        "counterparty_id": "CP-004",
+        "trade_date": "2026-05-09",
+        "settlement_due_date": "2026-05-13",
+        "notional_amount": 2700000.0,
+        "currency": "GBP",
+        "status": "OPEN"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_unmatched_trades",
+      "check_id": "CHK-TS-001",
+      "severity": "medium",
+      "reason": "Record present in trades_02 but absent from settlements_02",
+      "evidence": {
+        "trade_id": "TRD-020",
+        "counterparty_id": "CP-002",
+        "trade_date": "2026-05-09",
+        "settlement_due_date": "2026-05-13",
+        "notional_amount": 9100000.0,
+        "currency": "EUR",
+        "status": "OPEN"
+      },
+      "detected_at": "2026-05-10T18:13:40.997323+00:00"
+    }
+  ],
+  "metrics": []
+}

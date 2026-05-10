@@ -1,0 +1,8 @@
+counterparty_id,name,credit_limit,risk_rating,status
+CP-001,Apex Capital Partners,10000000.00,HIGH,ACTIVE
+CP-002,Blue River Securities,8000000.00,MEDIUM,ACTIVE
+CP-003,Crestview Financial,3000000.00,LOW,ACTIVE
+CP-004,Delta Trading Group,5000000.00,MEDIUM,ACTIVE
+CP-005,Eagle Investment Bank,6000000.00,HIGH,ACTIVE
+CP-006,Frontier Asset Management,11000000.00,MEDIUM,ACTIVE
+CP-007,Global Markets LLC,2000000.00,LOW,ACTIVE

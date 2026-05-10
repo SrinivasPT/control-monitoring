@@ -1,0 +1,44 @@
+dataset_id: gl_entries
+source_file: C:\Users\omega\projects\control-monitoring\input\GL_BALANCE_001\gl_entries.csv
+generated_at: '2026-05-10T18:11:24.028786+00:00'
+columns:
+- source_name: entry_id
+  normalized_name: entry_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: account_code
+  normalized_name: account_code
+  type: integer
+  nullable: true
+  date_formats_tried: null
+- source_name: account_name
+  normalized_name: account_name
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: debit_amount
+  normalized_name: debit_amount
+  type: float
+  nullable: true
+  date_formats_tried: null
+- source_name: credit_amount
+  normalized_name: credit_amount
+  type: float
+  nullable: true
+  date_formats_tried: null
+- source_name: entry_date
+  normalized_name: entry_date
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: period
+  normalized_name: period
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: created_by
+  normalized_name: created_by
+  type: string
+  nullable: true
+  date_formats_tried: null

@@ -1,0 +1,110 @@
+{
+  "violations": [
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-001",
+        "name": "Apex Capital Partners",
+        "credit_limit": 10000000.0,
+        "risk_rating": "HIGH",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-002",
+        "name": "Blue River Securities",
+        "credit_limit": 8000000.0,
+        "risk_rating": "MEDIUM",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-003",
+        "name": "Crestview Financial",
+        "credit_limit": 3000000.0,
+        "risk_rating": "LOW",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-004",
+        "name": "Delta Trading Group",
+        "credit_limit": 5000000.0,
+        "risk_rating": "MEDIUM",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-005",
+        "name": "Eagle Investment Bank",
+        "credit_limit": 6000000.0,
+        "risk_rating": "HIGH",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-006",
+        "name": "Frontier Asset Management",
+        "credit_limit": 11000000.0,
+        "risk_rating": "MEDIUM",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "counterparty_id": "CP-007",
+        "name": "Global Markets LLC",
+        "credit_limit": 2000000.0,
+        "risk_rating": "LOW",
+        "status": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:13:40.896952+00:00"
+    }
+  ],
+  "metrics": []
+}

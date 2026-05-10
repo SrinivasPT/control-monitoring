@@ -1,0 +1,37 @@
+{
+  "violations": [
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_04_completeness",
+      "check_id": "missing_termination_date",
+      "severity": "medium",
+      "reason": "Required field termination_date is NULL or missing",
+      "evidence": {
+        "employee_id": "EMP-0013",
+        "status": "TERMINATED",
+        "termination_date": null,
+        "first_name": "Mary",
+        "last_name": "Miller",
+        "department": "Sales"
+      },
+      "detected_at": "2026-05-10T17:47:19.418320+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_04_completeness",
+      "check_id": "missing_termination_date",
+      "severity": "medium",
+      "reason": "Required field termination_date is NULL or missing",
+      "evidence": {
+        "employee_id": "EMP-0020",
+        "status": "TERMINATED",
+        "termination_date": null,
+        "first_name": "Tina",
+        "last_name": "Taylor",
+        "department": "Sales"
+      },
+      "detected_at": "2026-05-10T17:47:19.418320+00:00"
+    }
+  ],
+  "metrics": []
+}

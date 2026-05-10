@@ -1,0 +1,405 @@
+{
+  "violations": [
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-001",
+        "employee_id": "EMP-001",
+        "username": "ajohnson",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-08",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-002",
+        "employee_id": "EMP-002",
+        "username": "bmartinez",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-07",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-003",
+        "employee_id": "EMP-003",
+        "username": "cwhite",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-01",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-004",
+        "employee_id": "EMP-004",
+        "username": "dkim",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-09",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-005",
+        "employee_id": "EMP-005",
+        "username": "echen",
+        "account_status": "DISABLED",
+        "last_access_date": "2025-11-28",
+        "disabled_date": "2025-12-02"
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-006",
+        "employee_id": "EMP-006",
+        "username": "fnguyen",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-06",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-007",
+        "employee_id": "EMP-007",
+        "username": "glee",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-04-30",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-008",
+        "employee_id": "EMP-008",
+        "username": "hwilson",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-08",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-009",
+        "employee_id": "EMP-009",
+        "username": "ibrown",
+        "account_status": "DISABLED",
+        "last_access_date": "2026-03-09",
+        "disabled_date": "2026-03-15"
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-010",
+        "employee_id": "EMP-010",
+        "username": "jdavis",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-07",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-011",
+        "employee_id": "EMP-011",
+        "username": "kmiller",
+        "account_status": "DISABLED",
+        "last_access_date": "2025-11-18",
+        "disabled_date": "2025-11-21"
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-012",
+        "employee_id": "EMP-012",
+        "username": "landerson",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-09",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-013",
+        "employee_id": "EMP-013",
+        "username": "mthomas",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-05",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-014",
+        "employee_id": "EMP-014",
+        "username": "njackson",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-08",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-015",
+        "employee_id": "EMP-015",
+        "username": "oharris",
+        "account_status": "DISABLED",
+        "last_access_date": "2026-01-29",
+        "disabled_date": "2026-01-30"
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-016",
+        "employee_id": "EMP-016",
+        "username": "pclark",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-06",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-017",
+        "employee_id": "EMP-017",
+        "username": "qrobinson",
+        "account_status": "DISABLED",
+        "last_access_date": "2025-10-12",
+        "disabled_date": "2025-10-16"
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-018",
+        "employee_id": "EMP-018",
+        "username": "rlewis",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-07",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-019",
+        "employee_id": "EMP-019",
+        "username": "swalker",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-04-20",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-020",
+        "employee_id": "EMP-020",
+        "username": "thall",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-09",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-021",
+        "employee_id": "EMP-021",
+        "username": "uyoung",
+        "account_status": "DISABLED",
+        "last_access_date": "2026-03-18",
+        "disabled_date": "2026-03-21"
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-022",
+        "employee_id": "EMP-022",
+        "username": "vking",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-08",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-023",
+        "employee_id": "EMP-023",
+        "username": "wwright",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-04-28",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-024",
+        "employee_id": "EMP-024",
+        "username": "xscott",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-07",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_data_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "account_id": "IAM-025",
+        "employee_id": "EMP-025",
+        "username": "ygreen",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-01",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:13:18.878855+00:00"
+    }
+  ],
+  "metrics": []
+}

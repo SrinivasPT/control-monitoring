@@ -1,0 +1,18 @@
+[
+  {
+    "control_id": "HR_ACCESS_001",
+    "group_id": "grp_01_terminated_employee_access",
+    "check_id": "CHK-HR-002",
+    "severity": "medium",
+    "metric_name": "accounts_disabled_within_sla",
+    "value": 5.0,
+    "threshold_operator": null,
+    "threshold_value": null,
+    "passed": true,
+    "supporting_counts": {
+      "total_disabled_accounts": 25,
+      "sla_compliance_rate": 0.2
+    },
+    "evaluated_at": "2026-05-10T18:19:20.138975+00:00"
+  }
+]

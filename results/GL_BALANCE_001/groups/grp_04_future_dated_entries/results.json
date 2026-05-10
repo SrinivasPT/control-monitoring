@@ -1,0 +1,23 @@
+{
+  "violations": [
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_04_future_dated_entries",
+      "check_id": "CHK-GL-003",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-GL-003",
+      "evidence": {
+        "entry_id": "GL-025",
+        "account_code": 4001,
+        "account_name": "Revenue",
+        "debit_amount": 0.0,
+        "credit_amount": 1800.0,
+        "entry_date": "2026-05-15",
+        "period": "2026-05",
+        "created_by": "system"
+      },
+      "detected_at": "2026-05-10T18:13:03.254649+00:00"
+    }
+  ],
+  "metrics": []
+}

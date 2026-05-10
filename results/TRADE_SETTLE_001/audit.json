@@ -1,0 +1,161 @@
+{
+  "control_id": "TRADE_SETTLE_001",
+  "executed_at": "2026-05-10T18:19:38.657270+00:00",
+  "executor_version": "1.0",
+  "total_violation_count": 15,
+  "total_groups": 5,
+  "groups": [
+    {
+      "group_id": "grp_01_unmatched_trades",
+      "execution_order": 1,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\TRADE_SETTLE_001\\groups\\grp_01_unmatched_trades\\compiled.sql",
+      "compiled_sql_sha256": "730811e8286787fdaa65940db5e730a57298765bb59bd0a64534110e59add30a",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "trades",
+          "sha256": "736a0bfbe2b6c50a41780cde457396d88d65d502f539e95ba0a0010c5e13873a",
+          "row_count": 20
+        },
+        {
+          "id": "settlements",
+          "sha256": "ae62fc1410fa19002d0b56d3d9babeac5424ea25ac3f546ee24455a6cf2c87b4",
+          "row_count": 12
+        }
+      ],
+      "execution_duration_ms": 93,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 8,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-TS-001",
+          "type": "row_level",
+          "violation_count": 8,
+          "passed": null,
+          "extra": {}
+        }
+      ]
+    },
+    {
+      "group_id": "grp_02_settlement_sla_breach",
+      "execution_order": 2,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\TRADE_SETTLE_001\\groups\\grp_02_settlement_sla_breach\\compiled.sql",
+      "compiled_sql_sha256": "87a070fc3b650f25e03aa54183476c619adb2195c19b18bdd87e6a17b916e818",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "trades",
+          "sha256": "736a0bfbe2b6c50a41780cde457396d88d65d502f539e95ba0a0010c5e13873a",
+          "row_count": 20
+        },
+        {
+          "id": "settlements",
+          "sha256": "ae62fc1410fa19002d0b56d3d9babeac5424ea25ac3f546ee24455a6cf2c87b4",
+          "row_count": 12
+        }
+      ],
+      "execution_duration_ms": 125,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 2,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-TS-002",
+          "type": "row_level",
+          "violation_count": 2,
+          "passed": null,
+          "extra": {}
+        }
+      ]
+    },
+    {
+      "group_id": "grp_03_credit_limit_violations",
+      "execution_order": 3,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\TRADE_SETTLE_001\\groups\\grp_03_credit_limit_violations\\compiled.sql",
+      "compiled_sql_sha256": "5292cfe1e5c7689e2e761f7d55831b2053bbe06891903d54364eede9565fa258",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "trades",
+          "sha256": "736a0bfbe2b6c50a41780cde457396d88d65d502f539e95ba0a0010c5e13873a",
+          "row_count": 20
+        },
+        {
+          "id": "counterparties",
+          "sha256": "e986649897eca4b4f578f49958f91ca9ed712b7b2b9dc12b0020ba37ac30f849",
+          "row_count": 7
+        }
+      ],
+      "execution_duration_ms": 108,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 3,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-TS-003",
+          "type": "row_level",
+          "violation_count": 3,
+          "passed": null,
+          "extra": {}
+        }
+      ]
+    },
+    {
+      "group_id": "grp_04_failed_settlements",
+      "execution_order": 4,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\TRADE_SETTLE_001\\groups\\grp_04_failed_settlements\\compiled.sql",
+      "compiled_sql_sha256": "9b072721e20d5af29d5b239585bd10ed6aef8c9f4dac504c8ac90bacafb0448c",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "settlements",
+          "sha256": "ae62fc1410fa19002d0b56d3d9babeac5424ea25ac3f546ee24455a6cf2c87b4",
+          "row_count": 12
+        }
+      ],
+      "execution_duration_ms": 61,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 2,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-TS-004",
+          "type": "row_level",
+          "violation_count": 2,
+          "passed": null,
+          "extra": {}
+        }
+      ]
+    },
+    {
+      "group_id": "grp_05_settlement_rate_aggregate",
+      "execution_order": 5,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\TRADE_SETTLE_001\\groups\\grp_05_settlement_rate_aggregate\\compiled.sql",
+      "compiled_sql_sha256": "8f5f19b9cd5474665edfc28256e4ea31aafbd085fbd61acce3e9ed6843d944dc",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "settlements",
+          "sha256": "ae62fc1410fa19002d0b56d3d9babeac5424ea25ac3f546ee24455a6cf2c87b4",
+          "row_count": 12
+        }
+      ],
+      "execution_duration_ms": 63,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 0,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-TS-005",
+          "type": "aggregate",
+          "violation_count": null,
+          "passed": true,
+          "extra": {
+            "total_settlements": 12.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "violations": [
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_03_credit_limit_violations",
+      "check_id": "CHK-TS-003",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-003",
+      "evidence": {
+        "trade_id": "TRD-020",
+        "counterparty_id": "CP-002",
+        "trade_date": "2026-05-09",
+        "settlement_due_date": "2026-05-13",
+        "notional_amount": 9100000.0,
+        "currency": "EUR",
+        "status": "OPEN",
+        "counterparty_id_1": "CP-002",
+        "name": "Blue River Securities",
+        "credit_limit": 8000000.0,
+        "risk_rating": "MEDIUM",
+        "status_2": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:19:38.509976+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_03_credit_limit_violations",
+      "check_id": "CHK-TS-003",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-003",
+      "evidence": {
+        "trade_id": "TRD-016",
+        "counterparty_id": "CP-006",
+        "trade_date": "2026-05-07",
+        "settlement_due_date": "2026-05-09",
+        "notional_amount": 12000000.0,
+        "currency": "EUR",
+        "status": "PENDING",
+        "counterparty_id_1": "CP-006",
+        "name": "Frontier Asset Management",
+        "credit_limit": 11000000.0,
+        "risk_rating": "MEDIUM",
+        "status_2": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:19:38.509976+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_03_credit_limit_violations",
+      "check_id": "CHK-TS-003",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-003",
+      "evidence": {
+        "trade_id": "TRD-009",
+        "counterparty_id": "CP-001",
+        "trade_date": "2026-05-02",
+        "settlement_due_date": "2026-05-06",
+        "notional_amount": 14500000.0,
+        "currency": "USD",
+        "status": "OPEN",
+        "counterparty_id_1": "CP-001",
+        "name": "Apex Capital Partners",
+        "credit_limit": 10000000.0,
+        "risk_rating": "HIGH",
+        "status_2": "ACTIVE"
+      },
+      "detected_at": "2026-05-10T18:19:38.509976+00:00"
+    }
+  ],
+  "metrics": []
+}

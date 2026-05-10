@@ -1,0 +1,34 @@
+dataset_id: hr_roster
+source_file: C:\Users\omega\projects\control-monitoring\input\HR_ACCESS_001\hr_roster.csv
+generated_at: '2026-05-10T18:11:24.059895+00:00'
+columns:
+- source_name: employee_id
+  normalized_name: employee_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: full_name
+  normalized_name: full_name
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: department
+  normalized_name: department
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: status
+  normalized_name: status
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: hire_date
+  normalized_name: hire_date
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: termination_date
+  normalized_name: termination_date
+  type: date
+  nullable: true
+  date_formats_tried: null

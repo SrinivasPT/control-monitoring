@@ -1,0 +1,35 @@
+{
+  "violations": [
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_05_failed_settlements",
+      "check_id": "CHK-TS-004",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-004",
+      "evidence": {
+        "settlement_id": "SET-005",
+        "trade_id": "TRD-006",
+        "settlement_date": "2026-05-02",
+        "amount_settled": 0.0,
+        "status": "FAILED"
+      },
+      "detected_at": "2026-05-10T18:13:41.234521+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_05_failed_settlements",
+      "check_id": "CHK-TS-004",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-004",
+      "evidence": {
+        "settlement_id": "SET-011",
+        "trade_id": "TRD-016",
+        "settlement_date": "2026-05-09",
+        "amount_settled": 0.0,
+        "status": "FAILED"
+      },
+      "detected_at": "2026-05-10T18:13:41.234521+00:00"
+    }
+  ],
+  "metrics": []
+}

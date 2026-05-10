@@ -1,0 +1,455 @@
+{
+  "violations": [
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-001",
+        "account_code": 1001,
+        "account_name": "Cash",
+        "debit_amount": 5000.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-03-01",
+        "period": "2026-03",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-002",
+        "account_code": 2001,
+        "account_name": "Accounts Payable",
+        "debit_amount": 0.0,
+        "credit_amount": 5000.0,
+        "entry_date": "2026-03-01",
+        "period": "2026-03",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-003",
+        "account_code": 1001,
+        "account_name": "Cash",
+        "debit_amount": 3200.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-03-05",
+        "period": "2026-03",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-004",
+        "account_code": 4001,
+        "account_name": "Revenue",
+        "debit_amount": 0.0,
+        "credit_amount": 3200.0,
+        "entry_date": "2026-03-05",
+        "period": "2026-03",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-005",
+        "account_code": 5001,
+        "account_name": "Operating Expenses",
+        "debit_amount": 1500.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-03-10",
+        "period": "2026-03",
+        "created_by": "mwang"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-006",
+        "account_code": 2001,
+        "account_name": "Accounts Payable",
+        "debit_amount": 0.0,
+        "credit_amount": 1500.0,
+        "entry_date": "2026-03-10",
+        "period": "2026-03",
+        "created_by": "mwang"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-007",
+        "account_code": 1001,
+        "account_name": "Cash",
+        "debit_amount": 8000.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-03-15",
+        "period": "2026-03",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-008",
+        "account_code": 4001,
+        "account_name": "Revenue",
+        "debit_amount": 0.0,
+        "credit_amount": 8000.0,
+        "entry_date": "2026-03-15",
+        "period": "2026-03",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-009",
+        "account_code": 1001,
+        "account_name": "Cash",
+        "debit_amount": 2100.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-03-20",
+        "period": "2026-03",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-010",
+        "account_code": 5002,
+        "account_name": "Salaries",
+        "debit_amount": 0.0,
+        "credit_amount": 2100.0,
+        "entry_date": "2026-03-20",
+        "period": "2026-03",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-011",
+        "account_code": 1001,
+        "account_name": "Cash",
+        "debit_amount": 6500.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-02",
+        "period": "2026-04",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-012",
+        "account_code": 4001,
+        "account_name": "Revenue",
+        "debit_amount": 0.0,
+        "credit_amount": 6500.0,
+        "entry_date": "2026-04-02",
+        "period": "2026-04",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-013",
+        "account_code": 5001,
+        "account_name": "Operating Expenses",
+        "debit_amount": 2200.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-08",
+        "period": "2026-04",
+        "created_by": "mwang"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-014",
+        "account_code": 2001,
+        "account_name": "Accounts Payable",
+        "debit_amount": 0.0,
+        "credit_amount": 2200.0,
+        "entry_date": "2026-04-08",
+        "period": "2026-04",
+        "created_by": "mwang"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-015",
+        "account_code": 1001,
+        "account_name": "Cash",
+        "debit_amount": 4100.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-12",
+        "period": "2026-04",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-016",
+        "account_code": 4002,
+        "account_name": "Other Income",
+        "debit_amount": 0.0,
+        "credit_amount": 4100.0,
+        "entry_date": "2026-04-12",
+        "period": "2026-04",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-017",
+        "account_code": 5002,
+        "account_name": "Salaries",
+        "debit_amount": 3800.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-15",
+        "period": "2026-04",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-018",
+        "account_code": 2001,
+        "account_name": "Accounts Payable",
+        "debit_amount": 0.0,
+        "credit_amount": 3800.0,
+        "entry_date": "2026-04-15",
+        "period": "2026-04",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-019",
+        "account_code": null,
+        "account_name": "Suspense Account",
+        "debit_amount": 900.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-18",
+        "period": "2026-04",
+        "created_by": "unknown"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-020",
+        "account_code": 5003,
+        "account_name": "Travel",
+        "debit_amount": 1250.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-20",
+        "period": "2026-04",
+        "created_by": "mwang"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-021",
+        "account_code": 2001,
+        "account_name": "Accounts Payable",
+        "debit_amount": 0.0,
+        "credit_amount": 1250.0,
+        "entry_date": "2026-04-20",
+        "period": "2026-04",
+        "created_by": "mwang"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-022",
+        "account_code": 1002,
+        "account_name": "Bank Account",
+        "debit_amount": 7700.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-05-01",
+        "period": "2026-05",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-023",
+        "account_code": 4001,
+        "account_name": "Revenue",
+        "debit_amount": 0.0,
+        "credit_amount": 7700.0,
+        "entry_date": "2026-05-01",
+        "period": "2026-05",
+        "created_by": "jsmith"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-024",
+        "account_code": 5001,
+        "account_name": "Operating Expenses",
+        "debit_amount": 1800.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-05-05",
+        "period": "2026-05",
+        "created_by": "alee"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    },
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_01_gl_entry_prep",
+      "check_id": "unknown",
+      "severity": "medium",
+      "reason": "Violation detected",
+      "evidence": {
+        "entry_id": "GL-025",
+        "account_code": 4001,
+        "account_name": "Revenue",
+        "debit_amount": 0.0,
+        "credit_amount": 1800.0,
+        "entry_date": "2026-05-15",
+        "period": "2026-05",
+        "created_by": "system"
+      },
+      "detected_at": "2026-05-10T18:13:02.975603+00:00"
+    }
+  ],
+  "metrics": []
+}

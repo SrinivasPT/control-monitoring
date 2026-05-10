@@ -1,0 +1,34 @@
+dataset_id: iam_accounts
+source_file: C:\Users\omega\projects\control-monitoring\input\HR_ACCESS_001\iam_accounts.csv
+generated_at: '2026-05-10T18:11:24.077697+00:00'
+columns:
+- source_name: account_id
+  normalized_name: account_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: employee_id
+  normalized_name: employee_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: username
+  normalized_name: username
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: account_status
+  normalized_name: account_status
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: last_access_date
+  normalized_name: last_access_date
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: disabled_date
+  normalized_name: disabled_date
+  type: date
+  nullable: true
+  date_formats_tried: null

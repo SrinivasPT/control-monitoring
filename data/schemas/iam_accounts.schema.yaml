@@ -1,0 +1,29 @@
+dataset_id: iam_accounts
+source_file: data\raw\iam_accounts.xlsx
+generated_at: '2026-05-10T17:46:42.938318+00:00'
+columns:
+- source_name: employee_id
+  normalized_name: employee_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: account_status
+  normalized_name: account_status
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: last_modified
+  normalized_name: last_modified
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: account_type
+  normalized_name: account_type
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: system
+  normalized_name: system
+  type: string
+  nullable: true
+  date_formats_tried: null

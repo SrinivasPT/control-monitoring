@@ -1,0 +1,23 @@
+{
+  "violations": [
+    {
+      "control_id": "GL_BALANCE_001",
+      "group_id": "grp_03_missing_account_code",
+      "check_id": "CHK-GL-002",
+      "severity": "medium",
+      "reason": "Required field account_code is NULL or missing",
+      "evidence": {
+        "entry_id": "GL-019",
+        "account_code": null,
+        "account_name": "Suspense Account",
+        "debit_amount": 900.0,
+        "credit_amount": 0.0,
+        "entry_date": "2026-04-18",
+        "period": "2026-04",
+        "created_by": "unknown"
+      },
+      "detected_at": "2026-05-10T18:13:03.181985+00:00"
+    }
+  ],
+  "metrics": []
+}

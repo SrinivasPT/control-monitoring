@@ -1,0 +1,39 @@
+dataset_id: trades
+source_file: C:\Users\omega\projects\control-monitoring\input\TRADE_SETTLE_001\trades.csv
+generated_at: '2026-05-10T18:11:24.128433+00:00'
+columns:
+- source_name: trade_id
+  normalized_name: trade_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: counterparty_id
+  normalized_name: counterparty_id
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: trade_date
+  normalized_name: trade_date
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: settlement_due_date
+  normalized_name: settlement_due_date
+  type: date
+  nullable: true
+  date_formats_tried: null
+- source_name: notional_amount
+  normalized_name: notional_amount
+  type: float
+  nullable: true
+  date_formats_tried: null
+- source_name: currency
+  normalized_name: currency
+  type: string
+  nullable: true
+  date_formats_tried: null
+- source_name: status
+  normalized_name: status
+  type: string
+  nullable: true
+  date_formats_tried: null

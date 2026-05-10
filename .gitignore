@@ -65,13 +65,10 @@ Thumbs.db
 Desktop.ini
 
 # Data, results, and work folders
-/data/
-/results/
-/work/
 /scrap/
 
 # Input files
-/input/
+
 
 # Logs
 *.log

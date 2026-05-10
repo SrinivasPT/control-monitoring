@@ -1,0 +1,186 @@
+{
+  "violations": [
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-001",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-HR-001",
+      "evidence": {
+        "employee_id": "EMP-003",
+        "full_name": "Carol White",
+        "department": "IT",
+        "status": "TERMINATED",
+        "hire_date": "2018-01-10",
+        "termination_date": "2026-01-15",
+        "account_id": "IAM-003",
+        "employee_id_1": "EMP-003",
+        "username": "cwhite",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-01",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.130360+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-001",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-HR-001",
+      "evidence": {
+        "employee_id": "EMP-007",
+        "full_name": "Grace Lee",
+        "department": "HR",
+        "status": "TERMINATED",
+        "hire_date": "2016-11-20",
+        "termination_date": "2026-02-28",
+        "account_id": "IAM-007",
+        "employee_id_1": "EMP-007",
+        "username": "glee",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-04-30",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.130360+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-001",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-HR-001",
+      "evidence": {
+        "employee_id": "EMP-013",
+        "full_name": "Mia Thomas",
+        "department": "HR",
+        "status": "TERMINATED",
+        "hire_date": "2018-07-17",
+        "termination_date": "2026-04-05",
+        "account_id": "IAM-013",
+        "employee_id_1": "EMP-013",
+        "username": "mthomas",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-05",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.130360+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-001",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-HR-001",
+      "evidence": {
+        "employee_id": "EMP-019",
+        "full_name": "Sam Walker",
+        "department": "OPS",
+        "status": "TERMINATED",
+        "hire_date": null,
+        "termination_date": null,
+        "account_id": "IAM-019",
+        "employee_id_1": "EMP-019",
+        "username": "swalker",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-04-20",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.130360+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-001",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-HR-001",
+      "evidence": {
+        "employee_id": "EMP-023",
+        "full_name": "Wendy Wright",
+        "department": "SALES",
+        "status": "TERMINATED",
+        "hire_date": "2019-04-12",
+        "termination_date": "2026-04-25",
+        "account_id": "IAM-023",
+        "employee_id_1": "EMP-023",
+        "username": "wwright",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-04-28",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.130360+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-001",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-HR-001",
+      "evidence": {
+        "employee_id": "EMP-025",
+        "full_name": "Yara Green",
+        "department": "FINANCE",
+        "status": "TERMINATED",
+        "hire_date": "2018-12-03",
+        "termination_date": null,
+        "account_id": "IAM-025",
+        "employee_id_1": "EMP-025",
+        "username": "ygreen",
+        "account_status": "ACTIVE",
+        "last_access_date": "2026-05-01",
+        "disabled_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.130360+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-003",
+      "severity": "medium",
+      "reason": "Required field termination_date is NULL or missing",
+      "evidence": {
+        "employee_id": "EMP-019",
+        "full_name": "Sam Walker",
+        "department": "OPS",
+        "status": "TERMINATED",
+        "hire_date": null,
+        "termination_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.141809+00:00"
+    },
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-003",
+      "severity": "medium",
+      "reason": "Required field termination_date is NULL or missing",
+      "evidence": {
+        "employee_id": "EMP-025",
+        "full_name": "Yara Green",
+        "department": "FINANCE",
+        "status": "TERMINATED",
+        "hire_date": "2018-12-03",
+        "termination_date": null
+      },
+      "detected_at": "2026-05-10T18:19:20.141809+00:00"
+    }
+  ],
+  "metrics": [
+    {
+      "control_id": "HR_ACCESS_001",
+      "group_id": "grp_01_terminated_employee_access",
+      "check_id": "CHK-HR-002",
+      "severity": "medium",
+      "metric_name": "accounts_disabled_within_sla",
+      "value": 5.0,
+      "threshold_operator": null,
+      "threshold_value": null,
+      "passed": true,
+      "supporting_counts": {
+        "total_disabled_accounts": 25,
+        "sla_compliance_rate": 0.2
+      },
+      "evaluated_at": "2026-05-10T18:19:20.138975+00:00"
+    }
+  ]
+}

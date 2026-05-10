@@ -1,0 +1,49 @@
+{
+  "violations": [
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_settlement_sla_breach",
+      "check_id": "CHK-TS-002",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-002",
+      "evidence": {
+        "trade_id": "TRD-003",
+        "counterparty_id": "CP-003",
+        "trade_date": "2026-04-29",
+        "settlement_due_date": "2026-05-01",
+        "notional_amount": 750000.0,
+        "currency": "USD",
+        "status": "SETTLED",
+        "settlement_id": "SET-003",
+        "trade_id_1": "TRD-003",
+        "settlement_date": "2026-05-06",
+        "amount_settled": 750000.0,
+        "status_2": "SETTLED"
+      },
+      "detected_at": "2026-05-10T18:19:38.392710+00:00"
+    },
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_02_settlement_sla_breach",
+      "check_id": "CHK-TS-002",
+      "severity": "medium",
+      "reason": "Violation detected by CHK-TS-002",
+      "evidence": {
+        "trade_id": "TRD-015",
+        "counterparty_id": "CP-003",
+        "trade_date": "2026-05-07",
+        "settlement_due_date": "2026-05-09",
+        "notional_amount": 1950000.0,
+        "currency": "USD",
+        "status": "SETTLED",
+        "settlement_id": "SET-010",
+        "trade_id_1": "TRD-015",
+        "settlement_date": "2026-05-12",
+        "amount_settled": 1950000.0,
+        "status_2": "SETTLED"
+      },
+      "detected_at": "2026-05-10T18:19:38.392710+00:00"
+    }
+  ],
+  "metrics": []
+}

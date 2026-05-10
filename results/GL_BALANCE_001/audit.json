@@ -1,0 +1,52 @@
+{
+  "control_id": "GL_BALANCE_001",
+  "executed_at": "2026-05-10T18:19:09.460393+00:00",
+  "executor_version": "1.0",
+  "total_violation_count": 2,
+  "total_groups": 1,
+  "groups": [
+    {
+      "group_id": "grp_01_gl_balance_checks",
+      "execution_order": 1,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\GL_BALANCE_001\\groups\\grp_01_gl_balance_checks\\compiled.sql",
+      "compiled_sql_sha256": "3d324e1bccd3491447553ee9debe0e1f67f04f00c8725cd76944875173c56465",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "gl_entries",
+          "sha256": "30a0db4e30d84ebf11914c7391244598b814ff3aef72404aa05a8cbc312100de",
+          "row_count": 25
+        }
+      ],
+      "execution_duration_ms": 63,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 2,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-GL-002",
+          "type": "row_level",
+          "violation_count": 1,
+          "passed": null,
+          "extra": {}
+        },
+        {
+          "check_id": "CHK-GL-003",
+          "type": "row_level",
+          "violation_count": 1,
+          "passed": null,
+          "extra": {}
+        },
+        {
+          "check_id": "CHK-GL-001",
+          "type": "aggregate",
+          "violation_count": null,
+          "passed": true,
+          "extra": {
+            "total_debits": 48050.0
+          }
+        }
+      ]
+    }
+  ]
+}

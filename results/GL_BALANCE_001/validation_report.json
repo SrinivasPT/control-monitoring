@@ -1,0 +1,16 @@
+{
+  "control_id": "GL_BALANCE_001",
+  "overall": "PASS",
+  "violations": {
+    "total": 2,
+    "by_severity": {
+      "medium": 2
+    }
+  },
+  "metrics": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  },
+  "execution_errors": 0
+}

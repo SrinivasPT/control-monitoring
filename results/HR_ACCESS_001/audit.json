@@ -1,0 +1,57 @@
+{
+  "control_id": "HR_ACCESS_001",
+  "executed_at": "2026-05-10T18:19:20.155319+00:00",
+  "executor_version": "1.0",
+  "total_violation_count": 8,
+  "total_groups": 1,
+  "groups": [
+    {
+      "group_id": "grp_01_terminated_employee_access",
+      "execution_order": 1,
+      "compiled_sql_path": "C:\\Users\\omega\\projects\\control-monitoring\\controls\\HR_ACCESS_001\\groups\\grp_01_terminated_employee_access\\compiled.sql",
+      "compiled_sql_sha256": "bf2ef11f3d16b2b7913c4bdce5408799bd56984b1ab0c7cdac7d8b9f037ca846",
+      "manual_edit_warning": false,
+      "datasets_used": [
+        {
+          "id": "hr_roster",
+          "sha256": "cf680d6c9c8c2e51c01e43b4bfe4c3475353cfa6f1f79a50a1b6e75b465560f2",
+          "row_count": 25
+        },
+        {
+          "id": "iam_accounts",
+          "sha256": "7777aee79bfe85d0f0269c5d80f07a3bf99bddbf2c6582638dfd3671bf379df3",
+          "row_count": 25
+        }
+      ],
+      "execution_duration_ms": 125,
+      "status": "success",
+      "error_message": null,
+      "violation_count": 8,
+      "checks_evaluated": [
+        {
+          "check_id": "CHK-HR-001",
+          "type": "row_level",
+          "violation_count": 6,
+          "passed": null,
+          "extra": {}
+        },
+        {
+          "check_id": "CHK-HR-003",
+          "type": "row_level",
+          "violation_count": 2,
+          "passed": null,
+          "extra": {}
+        },
+        {
+          "check_id": "CHK-HR-002",
+          "type": "aggregate",
+          "violation_count": null,
+          "passed": true,
+          "extra": {
+            "accounts_disabled_within_sla": 5.0
+          }
+        }
+      ]
+    }
+  ]
+}

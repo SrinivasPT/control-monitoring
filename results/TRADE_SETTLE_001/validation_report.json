@@ -1,0 +1,16 @@
+{
+  "control_id": "TRADE_SETTLE_001",
+  "overall": "PASS",
+  "violations": {
+    "total": 15,
+    "by_severity": {
+      "medium": 15
+    }
+  },
+  "metrics": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  },
+  "execution_errors": 0
+}

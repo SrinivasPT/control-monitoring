@@ -1,0 +1,18 @@
+[
+  {
+    "control_id": "GL_BALANCE_001",
+    "group_id": "grp_01_gl_balance_checks",
+    "check_id": "CHK-GL-001",
+    "severity": "medium",
+    "metric_name": "total_debits",
+    "value": 48050.0,
+    "threshold_operator": null,
+    "threshold_value": null,
+    "passed": true,
+    "supporting_counts": {
+      "total_credits": 47150.0,
+      "imbalance": 900.0
+    },
+    "evaluated_at": "2026-05-10T18:19:09.440378+00:00"
+  }
+]

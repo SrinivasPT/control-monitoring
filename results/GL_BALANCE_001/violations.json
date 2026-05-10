@@ -1,0 +1,38 @@
+[
+  {
+    "control_id": "GL_BALANCE_001",
+    "group_id": "grp_01_gl_balance_checks",
+    "check_id": "CHK-GL-002",
+    "severity": "medium",
+    "reason": "Required field account_code is NULL or missing",
+    "evidence": {
+      "entry_id": "GL-019",
+      "account_code": null,
+      "account_name": "Suspense Account",
+      "debit_amount": 900.0,
+      "credit_amount": 0.0,
+      "entry_date": "2026-04-18",
+      "period": "2026-04",
+      "created_by": "unknown"
+    },
+    "detected_at": "2026-05-10T18:19:09.444415+00:00"
+  },
+  {
+    "control_id": "GL_BALANCE_001",
+    "group_id": "grp_01_gl_balance_checks",
+    "check_id": "CHK-GL-003",
+    "severity": "medium",
+    "reason": "Violation detected by CHK-GL-003",
+    "evidence": {
+      "entry_id": "GL-025",
+      "account_code": 4001,
+      "account_name": "Revenue",
+      "debit_amount": 0.0,
+      "credit_amount": 1800.0,
+      "entry_date": "2026-05-15",
+      "period": "2026-05",
+      "created_by": "system"
+    },
+    "detected_at": "2026-05-10T18:19:09.452715+00:00"
+  }
+]

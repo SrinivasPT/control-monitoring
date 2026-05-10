@@ -1,0 +1,23 @@
+{
+  "violations": [],
+  "metrics": [
+    {
+      "control_id": "TRADE_SETTLE_001",
+      "group_id": "grp_06_settlement_rate_aggregate",
+      "check_id": "CHK-TS-005",
+      "severity": "medium",
+      "metric_name": "total_settlements",
+      "value": 12.0,
+      "threshold_operator": null,
+      "threshold_value": null,
+      "passed": true,
+      "supporting_counts": {
+        "settled_count": 10,
+        "failed_count": 2,
+        "pending_count": 0,
+        "settlement_rate": 0.8333
+      },
+      "evaluated_at": "2026-05-10T18:13:41.305039+00:00"
+    }
+  ]
+}
